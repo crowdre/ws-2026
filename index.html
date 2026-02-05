@@ -30,17 +30,31 @@
 
   <!-- 10th Anniversary Subtle Styles -->
   <style>
-    .anniversary-note {
-      background: #f8f8f8;
+    .anniversary-box {
+      background: linear-gradient(to right, #fffbf0, #fff9e6);
+      border: 1px solid #e8dcc8;
       border-left: 4px solid #d4af37;
-      padding: 15px 20px;
-      margin-bottom: 20px;
-      font-style: italic;
-      color: #555;
+      border-radius: 4px;
+      padding: 20px 25px;
+      margin-bottom: 25px;
     }
 
-    .anniversary-note strong {
-      color: #333;
+    .anniversary-box h3 {
+      color: #8b7355;
+      font-size: 18px;
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    .anniversary-box h3 span {
+      color: #d4af37;
+      font-weight: bold;
+    }
+
+    .anniversary-box p {
+      color: #555;
+      margin-bottom: 0;
+      line-height: 1.6;
     }
 
     .theme-box {
@@ -62,14 +76,30 @@
       border-left: 3px solid #d4af37;
     }
 
+    .theme-box.retrospective h4 {
+      color: #8b7355;
+    }
+
     .theme-box.prospective {
       border-left: 3px solid #1da1f2;
     }
 
     .theme-box p {
-      margin-bottom: 0;
+      margin-bottom: 10px;
       color: #666;
       font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .theme-box ul {
+      margin-bottom: 0;
+      padding-left: 20px;
+      color: #666;
+      font-size: 13px;
+    }
+
+    .theme-box ul li {
+      margin-bottom: 5px;
     }
 
     .milestone-banner {
@@ -90,6 +120,7 @@
       padding: 20px;
       border-radius: 4px;
       margin-top: 20px;
+      border: 1px solid #e8e8e8;
     }
 
     .journey-section h4 {
@@ -104,20 +135,32 @@
       flex-wrap: wrap;
       gap: 8px;
       font-size: 12px;
-      color: #666;
     }
 
-    .journey-list span {
+    .journey-list a {
       background: #fff;
-      border: 1px solid #e0e0e0;
-      padding: 4px 10px;
+      border: 1px solid #ddd;
+      padding: 6px 12px;
       border-radius: 3px;
+      color: #555;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .journey-list a:hover {
+      background: #1da1f2;
+      border-color: #1da1f2;
+      color: #fff;
+      text-decoration: none;
     }
 
     .journey-list span.current {
       background: #d4af37;
       color: #fff;
-      border-color: #d4af37;
+      border: 1px solid #d4af37;
+      padding: 6px 12px;
+      border-radius: 3px;
+      font-weight: 500;
     }
   </style>
 
@@ -145,7 +188,7 @@
       <div class="navbar navbar-default navbar-fixed-top">
         <div class="container">
           <div class="navbar-header">
-            <a href="./index.html" class="navbar-brand"><strong>CrowdRE 2026</strong></a>
+            <a href="./" class="navbar-brand"><strong>CrowdRE 2026</strong></a>
             <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
@@ -225,10 +268,15 @@
           <div class="section-inner">
             <h2 class="heading">Overview</h2>
             
-            <div class="anniversary-note">
-              <strong>A decade of CrowdRE:</strong> This tenth edition marks a special milestone. 
-              We invite the community to reflect on our journey since 2015 and help shape the roadmap 
-              for CrowdRE towards 2030 and beyond.
+            <div class="anniversary-box">
+              <h3><span>A Decade of CrowdRE</span> &mdash; Celebrating 10 Years</h3>
+              <p>
+                This tenth edition marks a special milestone in our community's history. First introduced in 2015, 
+                CrowdRE has become an indispensable part of the requirements engineering landscape, shaping how we 
+                understand user feedback, the crowd as a stakeholder, and the automation of requirements elicitation 
+                and validation. We invite the community to reflect on our journey and help shape the roadmap 
+                for CrowdRE towards 2030 and beyond.
+              </p>
             </div>
 
             <p style="text-align:justify">
@@ -249,45 +297,65 @@
             <h2 class="heading">This Year's Themes</h2>
             
             <div class="theme-box retrospective">
-              <h4>(1) One Decade of CrowdRE</h4>
+              <h4>(1) One Decade of CrowdRE: The Journey So Far</h4>
               <p>
-                <em>The journey so far and the way forward from here.</em> 
-                Retrospectively exploring the decade of CrowdRE that lies behind and the state of the art 
-                that we achieved to date.
+                <em>Retrospectively exploring the decade of CrowdRE and the state of the art we achieved to date.</em>
               </p>
+              <p>
+                CrowdRE has sensitized and shaped the field's understanding of user feedback, the crowd as a stakeholder, 
+                and the automation of requirements elicitation and validation. We encourage submissions exploring:
+              </p>
+              <ul>
+                <li>Reflections on CrowdRE's achievements and what remains to be done</li>
+                <li>The reliability of publicly available online user feedback sources</li>
+                <li>Determining appropriate crowd sizes for different contexts</li>
+                <li>Preventing inequality, bias, and underrepresentation in crowds</li>
+                <li>CrowdRE's relationship to Data-driven RE and adjacent fields like market research</li>
+              </ul>
             </div>
 
             <div class="theme-box prospective">
-              <h4>(2) CrowdRE TwentyThirty</h4>
+              <h4>(2) CrowdRE TwentyThirty: The Open Road to Improved Quality</h4>
               <p>
-                <em>The open road to improved quality.</em> 
-                Prospectively discussing a roadmap for CrowdRE towards and beyond 2030 in order to inspire 
-                each other in ways to move forward together.
+                <em>Prospectively discussing a roadmap for CrowdRE towards and beyond 2030.</em>
               </p>
+              <p>
+                The work on CrowdRE in the past decade provides a solid basis for the next leaps. 
+                We encourage submissions that look ahead:
+              </p>
+              <ul>
+                <li>Practical guidelines for implementing CrowdRE in real-world settings</li>
+                <li>Addressing cross-cutting qualities: sustainability, explainability, data privacy, and ethics</li>
+                <li>Strengthening prediction accuracy through neurosymbolic AI, feature models, and ontologies</li>
+                <li>New approaches such as "open source requirements"</li>
+                <li>CrowdRE's role in promoting social sustainability and well-being</li>
+              </ul>
             </div>
 
             <p style="text-align:justify; margin-top: 20px;">
-              The main theme of RE'26 is <em>Sustainability and workforce transformation in the era of 
-              generative AI</em>. AI and sustainability are leading themes in the perspective of the future 
-              of CrowdRE, while framing the crowd as a workforce allows us to explore the impact of GenAI 
-              on the crowd and how it can be adapted to meet their expectations.
+              <strong>RE'26 Theme:</strong> The main theme of RE'26 is <em>Sustainability and workforce transformation 
+              in the era of generative AI: How to prepare for a future in collaboration with AI tools and assistants</em>. 
+              AI and sustainability are leading themes in the perspective of the future of CrowdRE. Framing the crowd 
+              as a workforce allows us to not only explore the impact of GenAI on the crowd, but also to allow the crowd 
+              to provide feedback and take control over how GenAI should be adapted to best meet their expectations 
+              and achieve their professional goals.
             </p>
 
             <!-- Journey section -->
             <div class="journey-section">
               <h4>Our Journey: 10 Workshops Across 9 Countries</h4>
               <div class="journey-list">
-                <span>2015 Ottawa</span>
-                <span>2017 Lisbon</span>
-                <span>2018 Banff</span>
-                <span>2019 Jeju</span>
-                <span>2020 Zurich</span>
-                <span>2021 South Bend</span>
-                <span>2022 Melbourne</span>
-                <span>2023 Hannover</span>
-                <span>2024 Reykjavik</span>
-                <span>2025 Valencia</span>
-                <span class="current">2026 TBD</span>
+                <a href="https://crowdre.github.io/ws-2015/" target="_blank">2015 Ottawa</a>
+                <a href="https://crowdre.github.io/ws-2017/" target="_blank">2017 Lisbon</a>
+                <a href="http://aire18.aset.tu-berlin.de/" target="_blank">2018 Banff</a>
+                <a href="https://crowdre.github.io/ws-2019/" target="_blank">2019 Jeju</a>
+                <a href="https://crowdre.github.io/ws-2020/" target="_blank">2020 Zurich</a>
+                <a href="https://crowdre.github.io/ws-2021/" target="_blank">2021 South Bend</a>
+                <a href="https://crowdre.github.io/ws-2022/" target="_blank">2022 Melbourne</a>
+                <a href="https://crowdre.github.io/ws-2023/" target="_blank">2023 Hannover</a>
+                <a href="https://crowdre.github.io/ws-2024/" target="_blank">2024 Reykjavik</a>
+                <a href="https://crowdre.github.io/ws-2025/" target="_blank">2025 Valencia</a>
+                <span class="current">2026 &mdash; You are here!</span>
               </div>
             </div>
 
