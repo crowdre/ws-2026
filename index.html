@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-  <title>CrowdRE Workshop 2026</title>
+  <title>CrowdRE Workshop 2026 - 10th Anniversary</title>
   <!-- Meta -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The 10th International Workshop on Crowd-Based Requirements Engineering (CrowdRE'26)">
+  <meta name="description" content="The 10th International Workshop on Crowd-Based Requirements Engineering (CrowdRE'26) - Celebrating a Decade of CrowdRE">
   <meta name="author" content="CrowdRE Organizing Committee">
   <link rel="shortcut icon" href="favicon.ico">
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
@@ -28,6 +28,265 @@
   <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
 
+  <!-- 10th Anniversary Custom Styles -->
+  <style>
+    /* Anniversary Color Palette */
+    :root {
+      --gold-primary: #D4AF37;
+      --gold-light: #F4E4BA;
+      --gold-dark: #B8960C;
+      --crowdre-blue: #1da1f2;
+      --crowdre-orange: #de8a53;
+    }
+
+    /* Anniversary Banner */
+    .anniversary-banner {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .anniversary-banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4AF37' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .anniversary-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-dark) 100%);
+      color: #1a1a2e;
+      padding: 8px 24px;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+      position: relative;
+      z-index: 1;
+    }
+
+    .anniversary-title {
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .anniversary-title .decade {
+      color: var(--gold-primary);
+    }
+
+    .anniversary-subtitle {
+      font-size: 20px;
+      opacity: 0.9;
+      margin-bottom: 15px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .anniversary-tagline {
+      font-size: 16px;
+      color: var(--gold-light);
+      font-style: italic;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Statistics Section */
+    .stats-section {
+      background: #f8f9fa;
+      padding: 40px 0;
+      border-bottom: 3px solid var(--gold-primary);
+    }
+
+    .stat-box {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .stat-number {
+      font-size: 48px;
+      font-weight: 700;
+      color: var(--crowdre-blue);
+      line-height: 1;
+    }
+
+    .stat-number .gold {
+      color: var(--gold-primary);
+    }
+
+    .stat-label {
+      font-size: 14px;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 10px;
+    }
+
+    /* Theme Cards */
+    .theme-cards {
+      padding: 30px 0;
+    }
+
+    .theme-card {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      height: 100%;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      border-top: 4px solid var(--crowdre-blue);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .theme-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    }
+
+    .theme-card.retrospective {
+      border-top-color: var(--gold-primary);
+    }
+
+    .theme-card.prospective {
+      border-top-color: var(--crowdre-blue);
+    }
+
+    .theme-card-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    .theme-card.retrospective .theme-card-icon {
+      background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 100%);
+      color: #1a1a2e;
+    }
+
+    .theme-card.prospective .theme-card-icon {
+      background: linear-gradient(135deg, #e3f2fd 0%, var(--crowdre-blue) 100%);
+      color: white;
+    }
+
+    .theme-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .theme-card p {
+      color: #666;
+      line-height: 1.7;
+    }
+
+    /* Timeline Preview */
+    .timeline-preview {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    .timeline-preview h2 {
+      color: var(--gold-primary);
+      margin-bottom: 30px;
+    }
+
+    .timeline-years {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .timeline-year {
+      padding: 10px 20px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 8px;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+
+    .timeline-year:hover {
+      background: var(--gold-primary);
+      color: #1a1a2e;
+    }
+
+    .timeline-year.current {
+      background: var(--gold-primary);
+      color: #1a1a2e;
+      font-weight: bold;
+    }
+
+    .timeline-connector {
+      width: 30px;
+      height: 2px;
+      background: var(--gold-primary);
+      opacity: 0.5;
+    }
+
+    /* Override some default styles */
+    .section-inner {
+      padding: 25px;
+    }
+
+    .heading {
+      border-bottom: 2px solid var(--gold-primary);
+      padding-bottom: 10px;
+    }
+
+    /* CTA Button */
+    .cta-button {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--crowdre-orange) 0%, #c67840 100%);
+      color: white;
+      padding: 12px 30px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      margin-top: 20px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(222, 138, 83, 0.4);
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(222, 138, 83, 0.5);
+      color: white;
+      text-decoration: none;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .anniversary-title {
+        font-size: 28px;
+      }
+      .stat-number {
+        font-size: 36px;
+      }
+      .timeline-connector {
+        display: none;
+      }
+    }
+  </style>
+
   <script>
 
     var _gaq = _gaq || [];
@@ -46,119 +305,215 @@
 </head>
 
 <body>
-  <header class="header">
+  <!-- Navigation -->
+  <div class="navbar navbar-default navbar-fixed-top">
     <div class="container">
-
-      <div class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-          <div class="navbar-header">
-            <a href="./index.html" class="navbar-brand"><strong>CrowdRE 2026</strong></a>
-            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-          </div>
-          <div class="navbar-collapse collapse" id="navbar-main">
-            <ul class="nav navbar-nav">
-              <li>
-                <a href="./submissions.html">Submissions</a>
-              </li>
-              <li>
-                <a href="./res/cfp_2026.pdf" target="_blank">CfP</a>
-              </li>
-              <li>
-                <a href="./program.html">Program</a>
-              </li>
-              <li>
-                <a href="./committees.html">Committees</a>
-              </li>
-              <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" id="previous">Previous <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="previous">
-                  <li><a href="https://crowdre.github.io/ws-2025/" target="_blank">CrowdRE 2025</a></li>
-                  <li><a href="https://crowdre.github.io/ws-2024/" target="_blank">CrowdRE 2024</a></li>
-                  <li><a href="https://crowdre.github.io/ws-2023/" target="_blank">CrowdRE 2023</a></li>
-                  <li><a href="https://crowdre.github.io/ws-2022/" target="_blank">CrowdRE 2022</a></li>
-                  <li><a href="https://crowdre.github.io/ws-2021/" target="_blank">CrowdRE 2021</a></li>
-                  <li><a href="https://crowdre.github.io/ws-2020/" target="_blank">CrowdRE 2020</a></li>
-                  <li><a href="https://crowdre.github.io/ws-2019/" target="_blank">CrowdRE 2019</a></li>
-                  <li><a href="http://aire18.aset.tu-berlin.de/" target="_blank">AIRE 2018 with CrowdRE</a></li>
-                  <li><a href="https://crowdre.github.io/ws-2017/" target="_blank">CrowdRE 2017</a></li>
-                </ul>
-              </li>
-              <p class="navbar-text"><a href="https://twitter.com/CrowdreWs" target="_blank"><img
-                    src="./res/twitter.png" width="20" height="20" alt="Follow CrowdRE on Twitter"></a>&nbsp;<a
-                  href="https://www.facebook.com/CrowdreWs/" target="_blank"><img src="./res/facebook.png" width="20"
-                    height="20" alt="Follow CrowdRE on Facebook"></a></p>
-            </ul>
-            <ul class="nav navbar-nav navbar-right" style="background-color:#de8a53;">
-              <li><a href="https://easychair.org/conferences/?conf=crowdre2026" target="_blank"
-                  style="color:#ffffff;"><b>&nbsp;Submit&nbsp;</b></a></li>
-            </ul>
-          </div>
-        </div>
+      <div class="navbar-header">
+        <a href="./index.html" class="navbar-brand"><strong>CrowdRE 2026</strong></a>
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
       </div>
-
-      <div class="row">
-        <div class="col-md-9">
-          <br>
-          <h1 class="name"><span style="color:#1da1f2; font-size:18pt;">The 10th International Workshop on Crowd-Based
-              Requirements Engineering</span><span style="color:#de8a53; font-size:18pt;"> (CrowdRE'26)</span></h1>
-        </div>
-        <div class="col-md-3">
-          <br>
-          <br>
-          <strong>
-            <p class="lead">TBD, 2026<br><span style="font-size: 10pt">In conjunction with
-                <a href="https://conf.researchr.org/home/RE-2026" target="_blank">RE 2026</a></span></p>
-          </strong>
-        </div>
+      <div class="navbar-collapse collapse" id="navbar-main">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="./submissions.html">Submissions</a>
+          </li>
+          <li>
+            <a href="./res/cfp_2026.pdf" target="_blank">CfP</a>
+          </li>
+          <li>
+            <a href="./program.html">Program</a>
+          </li>
+          <li>
+            <a href="./committees.html">Committees</a>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" id="previous">Previous <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="previous">
+              <li><a href="https://crowdre.github.io/ws-2025/" target="_blank">CrowdRE 2025</a></li>
+              <li><a href="https://crowdre.github.io/ws-2024/" target="_blank">CrowdRE 2024</a></li>
+              <li><a href="https://crowdre.github.io/ws-2023/" target="_blank">CrowdRE 2023</a></li>
+              <li><a href="https://crowdre.github.io/ws-2022/" target="_blank">CrowdRE 2022</a></li>
+              <li><a href="https://crowdre.github.io/ws-2021/" target="_blank">CrowdRE 2021</a></li>
+              <li><a href="https://crowdre.github.io/ws-2020/" target="_blank">CrowdRE 2020</a></li>
+              <li><a href="https://crowdre.github.io/ws-2019/" target="_blank">CrowdRE 2019</a></li>
+              <li><a href="http://aire18.aset.tu-berlin.de/" target="_blank">AIRE 2018 with CrowdRE</a></li>
+              <li><a href="https://crowdre.github.io/ws-2017/" target="_blank">CrowdRE 2017</a></li>
+            </ul>
+          </li>
+          <p class="navbar-text"><a href="https://twitter.com/CrowdreWs" target="_blank"><img
+                src="./res/twitter.png" width="20" height="20" alt="Follow CrowdRE on Twitter"></a>&nbsp;<a
+              href="https://www.facebook.com/CrowdreWs/" target="_blank"><img src="./res/facebook.png" width="20"
+                height="20" alt="Follow CrowdRE on Facebook"></a></p>
+        </ul>
+        <ul class="nav navbar-nav navbar-right" style="background-color:#de8a53;">
+          <li><a href="https://easychair.org/conferences/?conf=crowdre2026" target="_blank"
+              style="color:#ffffff;"><b>&nbsp;Submit&nbsp;</b></a></li>
+        </ul>
       </div>
-
     </div>
-  </header>
+  </div>
 
+  <!-- Anniversary Hero Banner -->
+  <section class="anniversary-banner" style="margin-top: 50px;">
+    <div class="container">
+      <div class="anniversary-badge">Celebrating 10 Years</div>
+      <h1 class="anniversary-title">
+        <span class="decade">10th</span> International Workshop on<br>
+        Crowd-Based Requirements Engineering
+      </h1>
+      <p class="anniversary-subtitle">CrowdRE'26 &mdash; A Decade of Innovation in Requirements Engineering</p>
+      <p class="anniversary-tagline">"Looking back to move forward together"</p>
+      <p style="margin-top: 20px; position: relative; z-index: 1;">
+        <span style="font-size: 14px; opacity: 0.8;">In conjunction with <a href="https://conf.researchr.org/home/RE-2026" target="_blank" style="color: #D4AF37;">RE 2026</a></span>
+      </p>
+    </div>
+  </section>
+
+  <!-- Statistics Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <div class="stat-box">
+            <div class="stat-number"><span class="gold">10</span></div>
+            <div class="stat-label">Workshops Since 2015</div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="stat-box">
+            <div class="stat-number">50+</div>
+            <div class="stat-label">Papers Published</div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="stat-box">
+            <div class="stat-number">200+</div>
+            <div class="stat-label">Total Attendees</div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="stat-box">
+            <div class="stat-number">9</div>
+            <div class="stat-label">Countries Visited</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline Preview -->
+  <section class="timeline-preview">
+    <div class="container">
+      <h2>Our Journey</h2>
+      <div class="timeline-years">
+        <div class="timeline-year">2015 Ottawa</div>
+        <div class="timeline-connector"></div>
+        <div class="timeline-year">2017 Lisbon</div>
+        <div class="timeline-connector"></div>
+        <div class="timeline-year">2018 Banff</div>
+        <div class="timeline-connector"></div>
+        <div class="timeline-year">2019 Jeju</div>
+        <div class="timeline-connector"></div>
+        <div class="timeline-year">2020 Zurich</div>
+        <div class="timeline-connector"></div>
+        <div class="timeline-year">2021 South Bend</div>
+        <div class="timeline-connector"></div>
+        <div class="timeline-year">2022 Melbourne</div>
+        <div class="timeline-connector"></div>
+        <div class="timeline-year">2023 Hannover</div>
+        <div class="timeline-connector"></div>
+        <div class="timeline-year">2024 Reykjavik</div>
+        <div class="timeline-connector"></div>
+        <div class="timeline-year">2025 Valencia</div>
+        <div class="timeline-connector"></div>
+        <div class="timeline-year current">2026 TBD</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
   <div class="container sections-wrapper">
 
     <div class="row">
       <div class="col-md-9">
         <section class="about section">
           <div class="section-inner">
-            <h2 class="heading">Overview</h2>
-            <p style="text-align:justify">
+            <h2 class="heading">About CrowdRE'26</h2>
+            <p style="text-align:justify; font-size: 15px; line-height: 1.8;">
               CrowdRE has helped requirements engineering (RE) scale up to settings with thousands to millions of users 
               of a (software) product. Online media enable stakeholders to form a large and heterogeneous group that can 
               be denoted as a 'crowd'. The Crowd-Based Requirements Engineering paradigm integrates appropriate methods 
-              and tools for dealing with crowds in a single framework. Since 2015, the International Workshop on 
-              Crowd-Based Requirements Engineering (CrowdRE) has been facilitating interactive discussions between 
-              scientists and representatives of industry through keynotes, interactive sessions, and paper submissions 
-              presenting novel and innovative ideas on involving the crowd and collecting, harmonizing, analyzing, and 
-              interpreting user feedback.
+              and tools for dealing with crowds in a single framework.
             </p>
-            <p style="text-align:justify">
-              This <b>celebratory tenth installment</b> of the CrowdRE workshop pursues two main goals: 
-              <b>(1) One decade of CrowdRE</b> &mdash; retrospectively exploring the decade of CrowdRE that lies behind 
-              and the state of the art that we achieved to date, and <b>(2) CrowdRE TwentyThirty</b> &mdash; prospectively 
-              discussing a roadmap for CrowdRE towards and beyond 2030 in order to inspire each other in ways to move 
-              forward together.
+            <p style="text-align:justify; font-size: 15px; line-height: 1.8;">
+              Since 2015, the International Workshop on Crowd-Based Requirements Engineering (CrowdRE) has been 
+              facilitating interactive discussions between scientists and representatives of industry through keynotes, 
+              interactive sessions, and paper submissions presenting novel and innovative ideas on involving the crowd 
+              and collecting, harmonizing, analyzing, and interpreting user feedback.
             </p>
-            <p style="text-align:justify">
-              The main theme of RE'26 is <em>Sustainability and workforce transformation in the era of generative AI</em>. 
-              AI and sustainability are leading themes in the perspective of the future of CrowdRE, while framing the crowd 
-              as a workforce allows us to not only explore the impact of GenAI on the crowd, but to also allow the crowd to 
-              provide feedback and take control over how GenAI should be adapted to best meet their expectations and achieve 
-              their professional goals.
-            </p>
+
+            <!-- Theme Cards -->
+            <div class="theme-cards">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="theme-card retrospective">
+                    <div class="theme-card-icon">
+                      <i class="fa fa-history"></i>
+                    </div>
+                    <h3>One Decade of CrowdRE</h3>
+                    <p>
+                      <em>The journey so far and the way forward from here.</em><br><br>
+                      Retrospectively exploring the decade of CrowdRE that lies behind and the state of the art 
+                      that we achieved to date. What have we accomplished? What remains to be done?
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="theme-card prospective">
+                    <div class="theme-card-icon">
+                      <i class="fa fa-rocket"></i>
+                    </div>
+                    <h3>CrowdRE TwentyThirty</h3>
+                    <p>
+                      <em>The open road to improved quality.</em><br><br>
+                      Prospectively discussing a roadmap for CrowdRE towards and beyond 2030 &mdash; inspiring 
+                      each other in ways to move forward together into the next decade.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <hr>
 
+            <h2 class="heading">RE'26 Theme</h2>
+            <p style="text-align:justify; font-size: 15px; line-height: 1.8;">
+              The main theme of RE'26 is <strong><em>Sustainability and workforce transformation in the era of 
+              generative AI</em></strong>. AI and sustainability are leading themes in the perspective of the future 
+              of CrowdRE, while framing the crowd as a workforce allows us to not only explore the impact of GenAI 
+              on the crowd, but to also allow the crowd to provide feedback and take control over how GenAI should 
+              be adapted to best meet their expectations and achieve their professional goals.
+            </p>
+
+            <div style="text-align: center; margin-top: 30px;">
+              <a href="./submissions.html" class="cta-button">Submit Your Paper</a>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="about section">
+          <div class="section-inner">
             <h2 class="heading">More Information</h2>
             <p>Find more information under the following links:</p>
-            <ul>
-              <li><a href="./submissions.html" target="_blank">Submissions</a>: Workshop topics, key questions and
+            <ul style="font-size: 15px; line-height: 2;">
+              <li><a href="./submissions.html">Submissions</a>: Workshop topics, key questions and
                 submission details</li>
-              <li><a href="./program.html" target="_blank">Program and venue</a>: Workshop format and location</li>
+              <li><a href="./program.html">Program and venue</a>: Workshop format and location</li>
               <li><a href="./res/cfp_2026.pdf" target="_blank">Call for papers (PDF)</a></li>
               <li><a href="https://easychair.org/conferences/?conf=crowdre2026" target="_blank">Submit your paper
                         (EasyChair)</a></li>
@@ -170,7 +525,9 @@
       <div class="col-md-3">
 
         <div class="panel panel-default">
-          <div class="panel-heading"><b>Important Dates</b></div>
+          <div class="panel-heading" style="background: linear-gradient(135deg, #D4AF37 0%, #B8960C 100%); color: #1a1a2e;">
+            <b>Important Dates</b>
+          </div>
           <div class="panel-body">
             <ul class="list-unstyled">
               <li><span style="font-size: 9pt"><b>Abstract Submission:</b> TBD (optional)</span></li>
@@ -181,6 +538,18 @@
             </ul>
             <p>All deadlines at 23:59:59 <a href="https://www.timeanddate.com/time/zones/aoe" target="_blank">AoE</a>.
             </p>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><b>Connect With Us</b></div>
+          <div class="panel-body" style="text-align: center;">
+            <a href="https://twitter.com/CrowdreWs" target="_blank" style="margin: 0 10px;">
+              <img src="./res/twitter.png" width="32" height="32" alt="Twitter">
+            </a>
+            <a href="https://www.facebook.com/CrowdreWs/" target="_blank" style="margin: 0 10px;">
+              <img src="./res/facebook.png" width="32" height="32" alt="Facebook">
+            </a>
           </div>
         </div>
 
