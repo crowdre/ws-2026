@@ -28,6 +28,53 @@
   <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
 
+  <style>
+    .theme-box {
+      background: #fafafa;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+      padding: 20px;
+      margin-bottom: 15px;
+    }
+
+    .theme-box h4 {
+      color: #1da1f2;
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    .theme-box.retrospective {
+      border-left: 3px solid #d4af37;
+    }
+
+    .theme-box.retrospective h4 {
+      color: #8b7355;
+    }
+
+    .theme-box.prospective {
+      border-left: 3px solid #1da1f2;
+    }
+
+    .theme-box p {
+      margin-bottom: 10px;
+      color: #666;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .theme-box ul {
+      margin-bottom: 0;
+      padding-left: 20px;
+      color: #666;
+      font-size: 13px;
+    }
+
+    .theme-box ul li {
+      margin-bottom: 5px;
+    }
+  </style>
+
   <script>
 
     var _gaq = _gaq || [];
@@ -194,23 +241,25 @@
         <section class="about section">
           <div class="section-inner">
             <h2 class="heading">Workshop Topics</h2>
-            <p>
-              We welcome original papers and presentation proposals that focus on traditional and cutting-edge CrowdRE 
-              topics. Each paper should address at least one of these topics:
-            </p>
-            <ul>
-              <li>The meaningful role of CrowdRE in the context of an evolving RE for software systems growing 
-                increasingly more complex</li>
-              <li>Applications of (generative) artificial intelligence (AI / GenAI), machine learning, and natural 
-                language processing for CrowdRE</li>
-              <li>The impact of societal demands on RE and software qualities, such as responsible, trustworthy &amp; 
-                explainable AI, sustainability, human values, ethics, needs &amp; goals, and diversity &amp; inclusion</li>
-              <li>New or revised theories, approaches, and methods for CrowdRE that foster trans- and interdisciplinarity 
-                and industry applicability</li>
-              <li>Case studies with lessons learned from practical, industry-oriented, multidisciplinary and cross-domain 
-                collaborations that involve CrowdRE</li>
-              <li>New or revised methods for CrowdRE inspired, learned, or adapted from other disciplines</li>
-            </ul>
+            <div class="theme-box retrospective">
+              <p>
+                We welcome original papers and presentation proposals that focus on traditional and cutting-edge CrowdRE 
+                topics. Each paper should address at least one of these topics:
+              </p>
+              <ul>
+                <li>The meaningful role of CrowdRE in the context of an evolving RE for software systems growing 
+                  increasingly more complex</li>
+                <li>Applications of (generative) artificial intelligence (AI / GenAI), machine learning, and natural 
+                  language processing for CrowdRE</li>
+                <li>The impact of societal demands on RE and software qualities, such as responsible, trustworthy &amp; 
+                  explainable AI, sustainability, human values, ethics, needs &amp; goals, and diversity &amp; inclusion</li>
+                <li>New or revised theories, approaches, and methods for CrowdRE that foster trans- and interdisciplinarity 
+                  and industry applicability</li>
+                <li>Case studies with lessons learned from practical, industry-oriented, multidisciplinary and cross-domain 
+                  collaborations that involve CrowdRE</li>
+                <li>New or revised methods for CrowdRE inspired, learned, or adapted from other disciplines</li>
+              </ul>
+            </div>
           </div>
         </section>
 
@@ -218,39 +267,41 @@
         <section class="about section">
           <div class="section-inner">
             <h2 class="heading">Key Topics</h2>
-            <p>
-              CrowdRE'26 celebrates its tenth anniversary with two main themes:
-            </p>
-            
-            <h4>(1) One decade of CrowdRE: The journey so far and the way forward from here</h4>
-            <p>
-              First introduced in 2015, CrowdRE has become an indispensable part of the RE landscape. It has sensitized 
-              and shaped the understanding of the field for user feedback, the crowd as a stakeholder, and the automation 
-              of requirements elicitation and validation. At the same time, it is interesting to question what it has not 
-              been able to achieve, but which it might still do. We encourage submissions exploring:
-            </p>
-            <ul>
-              <li>Reflections on CrowdRE's achievements and open challenges over the past decade</li>
-              <li>The reliability of sources of publicly available online user feedback</li>
-              <li>The appropriate size of a crowd in a given context</li>
-              <li>Suitable ways for preventing or combating inequality, bias, and underrepresented subgroups in crowds</li>
-              <li>Understanding CrowdRE's place in RE and its relation to Data-driven RE and adjacent fields like market research</li>
-            </ul>
+            <div class="theme-box prospective">
+              <p>
+                CrowdRE'26 celebrates its tenth anniversary with two main themes:
+              </p>
+              
+              <h4>(1) One decade of CrowdRE: The journey so far and the way forward from here</h4>
+              <p>
+                First introduced in 2015, CrowdRE has become an indispensable part of the RE landscape. It has sensitized 
+                and shaped the understanding of the field for user feedback, the crowd as a stakeholder, and the automation 
+                of requirements elicitation and validation. At the same time, it is interesting to question what it has not 
+                been able to achieve, but which it might still do. We encourage submissions exploring:
+              </p>
+              <ul>
+                <li>Reflections on CrowdRE's achievements and open challenges over the past decade</li>
+                <li>The reliability of sources of publicly available online user feedback</li>
+                <li>The appropriate size of a crowd in a given context</li>
+                <li>Suitable ways for preventing or combating inequality, bias, and underrepresented subgroups in crowds</li>
+                <li>Understanding CrowdRE's place in RE and its relation to Data-driven RE and adjacent fields like market research</li>
+              </ul>
 
-            <h4>(2) CrowdRE TwentyThirty: The open road to improved quality</h4>
-            <p>
-              The work on CrowdRE in the past decade provides a solid basis for the next leaps. We encourage submissions 
-              that look ahead to what CrowdRE will contribute in the 2030s:
-            </p>
-            <ul>
-              <li>Practical guidelines on how to implement CrowdRE in practical settings</li>
-              <li>Addressing emergent and cross-cutting qualities such as software sustainability, explainability, 
-                data privacy, and ethicality</li>
-              <li>Strengthening prediction accuracy through neurosymbolic artificial intelligence, feature models, 
-                and ontologies</li>
-              <li>New approaches within CrowdRE, such as "open source requirements"</li>
-              <li>The role of CrowdRE in promoting social sustainability and well-being</li>
-            </ul>
+              <h4 style="margin-top: 20px;">(2) CrowdRE TwentyThirty: The open road to improved quality</h4>
+              <p>
+                The work on CrowdRE in the past decade provides a solid basis for the next leaps. We encourage submissions 
+                that look ahead to what CrowdRE will contribute in the 2030s:
+              </p>
+              <ul>
+                <li>Practical guidelines on how to implement CrowdRE in practical settings</li>
+                <li>Addressing emergent and cross-cutting qualities such as software sustainability, explainability, 
+                  data privacy, and ethicality</li>
+                <li>Strengthening prediction accuracy through neurosymbolic artificial intelligence, feature models, 
+                  and ontologies</li>
+                <li>New approaches within CrowdRE, such as "open source requirements"</li>
+                <li>The role of CrowdRE in promoting social sustainability and well-being</li>
+              </ul>
+            </div>
           </div>
         </section>
 
